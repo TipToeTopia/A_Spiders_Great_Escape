@@ -7,8 +7,8 @@ CGameApp app;
 int main(int argc, char* argv[])
 {
 	//app.DebugMemoryLeaks();
-	app.OpenWindow(1280, 768, "Cardboard Gear Slack");
-	//app.OpenFullScreen(1280, 768, 24);
+	app.OpenWindow(1250, 700, "My Game!");
+	//app.OpenFullScreen(800, 600, 24);
 	//app.OpenConsole();
 	app.SetClearColor(CColor::White());
 	app.Run(&game);
