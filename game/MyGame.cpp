@@ -253,11 +253,16 @@ bool Intersection(CVector a, CVector b, CVector c, CVector d, float& k1, float& 
 	CVector v1 = b - a;
 	CVector v2 = d - c;
 	CVector con = c - a;
+
+	// if lines are parrelel or perpendicular
 	float det = v1.m_x * v2.m_y - v1.m_y * v2.m_x;
+
 	if (det != 0)
 	{
+		// point from 0 to 1 where interdection is hit
 		k1 = (v2.m_y * con.m_x - v2.m_x * con.m_y) / det;
 		k2 = (v1.m_y * con.m_x - v1.m_x * con.m_y) / det;
+
 		return true;
 	}
 	else
